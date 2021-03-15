@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
         <?php wp_head(); ?>
 	</head>
-	<body class="is-preload <?php body_class(); ?>">
+	<body <?php body_class('is-preload'); ?>>
 
                 <!-- Header -->
             <header id="header">
