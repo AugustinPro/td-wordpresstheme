@@ -1,5 +1,5 @@
         
-	</div> <!-- end of wrapper -->
+	 <!-- end of wrapper -->
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>

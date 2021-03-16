@@ -6,7 +6,7 @@
 -->
 <html>
 	<head <?php language_attributes(); ?>>
-		<title>Future Imperfect by HTML5 UP</title>
+		<title><?php bloginfo($show = 'name') ?></title>
 		<meta charset="<?php bloginfo('charset'); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -17,7 +17,7 @@
         <div id="wrapper">
                 <!-- Header -->
             <header id="header">
-                <h1><a href="index.html">Future Imperfect</a></h1>
+                <h1><a href="<?php echo home_url( '/' ); ?>"><?php bloginfo($show = 'name'); ?></a></h1>
                 <nav class="links">
                     <ul>
                         <li><a href="#">Lorem</a></li>

@@ -3,10 +3,10 @@
 
 <!-- Intro -->
     <section id="intro">
-        <a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a>
+        <a href="#" class="logo"><img src="<?php echo get_site_icon_url() ?>" alt="" /></a>
         <header>
-            <h2>Future Imperfect</h2>
-            <p>Another fine responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
+            <h2><?php bloginfo($show = 'name') ?></h2>
+            <p><?php bloginfo($show = 'description') ?></a></p>
         </header>
     </section>
 
@@ -117,4 +117,4 @@
         </ul>
     </section>
 
-<?php get_template_part('socials.php'); ?>
+<?php get_template_part('parts/socials'); ?>

@@ -13,20 +13,20 @@
 						<p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
 					</div>
 					<div class="meta">
-						<time class="published" datetime="2015-11-01"><?php the_time( 'j F Y, H:i' ); ?></time>
-						<a href="#" class="author"><span class="name"><?php the_author(); ?></span><img src="images/avatar.jpg" alt="" /></a>
+						<time class="published" datetime="2015-11-01"><?php the_time( 'j F, Y' ); ?></time>
+						<a href="#" class="author"><span class="name"><?php the_author(); ?></span><?php echo get_avatar( get_the_author_meta( 'ID' ), 40 ); ?></a>
 					</div>
 				</header>
 				<a href="<?php the_permalink(); ?>" class="image featured"><?php the_post_thumbnail(); ?></a>
-				<p>
+				<div class="content">
 					<?php the_excerpt(); ?>
-				</p>
+				</div>
 				<footer>
 					<ul class="actions">
 						<li><a href="<?php the_permalink(); ?>" class="button large">Continue Reading</a></li>
 					</ul>
 					<ul class="stats">
-						<li><a href="#">General</a></li>
+						<li><?php the_category(); ?></li>
 						<li><a href="#" class="icon solid fa-heart">28</a></li>
 						<li><a href="#" class="icon solid fa-comment"><?php comments_number( '0', '1', '%' ); ?></a></li>
 					</ul>
