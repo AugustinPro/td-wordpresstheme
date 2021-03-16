@@ -22,3 +22,15 @@ function add_my_assets() {
     wp_enqueue_style( 'stuffidk', get_template_directory_uri() . '/assets/css/fontawesome-all.min.css', array(), '1.0' );
 }
 add_action( 'wp_enqueue_scripts', 'add_my_assets' );
+
+//Declaring a sidebar
+register_sidebar( array(
+	'id' => 'blog-sidebar',     //ID used to call the sidebar
+	'name' => 'Blog',           //this is equivalent to the slug in wp
+) );
+
+/** * Completely Remove jQuery From WordPress Admin Dashboard */
+add_action('wp_enqueue_scripts', 'no_more_jquery');
+function no_more_jquery(){
+    wp_deregister_script('jquery');
+}

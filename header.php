@@ -13,7 +13,8 @@
         <?php wp_head(); ?>
 	</head>
 	<body <?php body_class('is-preload'); ?>>
-
+            <?php wp_body_open(); ?>
+        <div id="wrapper">
                 <!-- Header -->
             <header id="header">
                 <h1><a href="index.html">Future Imperfect</a></h1>
@@ -87,7 +88,4 @@
                             <li><a href="#" class="button large fit">Log In</a></li>
                         </ul>
                     </section>
-
             </section>
-
-            <?php wp_body_open(); ?>
