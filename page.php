@@ -1,5 +1,4 @@
 <?php get_header(); ?>
- 	<h1>Le blog Capitaine WP</h1>
 
 	<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
   

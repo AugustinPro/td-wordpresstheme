@@ -5,87 +5,92 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head <?php language_attributes(); ?>>
-		<title><?php bloginfo($show = 'name') ?></title>
-		<meta charset="<?php bloginfo('charset'); ?>" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-        <?php wp_head(); ?>
-	</head>
-	<body <?php body_class('is-preload'); ?>>
-            <?php wp_body_open(); ?>
-        <div id="wrapper">
-                <!-- Header -->
-            <header id="header">
-                <h1><a href="<?php echo home_url( '/' ); ?>"><?php bloginfo($show = 'name'); ?></a></h1>
-                <nav class="links">
-                    <ul>
+
+<head <?php language_attributes(); ?>>
+    <title><?php bloginfo($show = 'name') ?></title>
+    <meta charset="<?php bloginfo('charset'); ?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <?php wp_head(); ?>
+</head>
+
+<body <?php body_class('is-preload'); ?>>
+    <?php wp_body_open(); ?>
+    <div id="wrapper">
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="<?php echo home_url('/'); ?>"><?php bloginfo($show = 'name'); ?></a></h1>
+            <nav class="links">
+                <?php wp_nav_menu(array('theme_location' => 'main', 'container' => 'ul')); ?>
+                <!-- <ul>
                         <li><a href="#">Lorem</a></li>
                         <li><a href="#">Ipsum</a></li>
                         <li><a href="#">Feugiat</a></li>
                         <li><a href="#">Tempus</a></li>
                         <li><a href="#">Adipiscing</a></li>
-                    </ul>
-                </nav>
-                <nav class="main">
-                    <ul>
-                        <li class="search">
-                            <a class="fa-search" href="#search">Search</a>
-                            <form id="search" method="get" action="#">
-                                <input type="text" name="query" placeholder="Search" />
-                            </form>
-                        </li>
-                        <li class="menu">
-                            <a class="fa-bars" href="#menu">Menu</a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
-
-        <!-- Menu -->
-            <section id="menu">
-
-                <!-- Search -->
-                    <section>
-                        <form class="search" method="get" action="#">
+                    </ul> -->
+            </nav>
+            <nav class="main">
+                <ul>
+                    <li class="search">
+                        <a class="fa-search" href="#search">Search</a>
+                        <form id="search" method="get" action="#">
                             <input type="text" name="query" placeholder="Search" />
                         </form>
-                    </section>
+                    </li>
+                    <li class="menu">
+                        <a class="fa-bars" href="#menu">Menu</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-                <!-- Links -->
-                    <section>
-                        <ul class="links">
-                            <li>
-                                <a href="#">
-                                    <h3>Lorem ipsum</h3>
-                                    <p>Feugiat tempus veroeros dolor</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <h3>Dolor sit amet</h3>
-                                    <p>Sed vitae justo condimentum</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <h3>Feugiat veroeros</h3>
-                                    <p>Phasellus sed ultricies mi congue</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <h3>Etiam sed consequat</h3>
-                                    <p>Porta lectus amet ultricies</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </section>
+        <!-- Menu -->
+        <section id="menu">
 
-                <!-- Actions -->
-                    <section>
-                        <ul class="actions stacked">
-                            <li><a href="#" class="button large fit">Log In</a></li>
-                        </ul>
-                    </section>
+            <!-- Search -->
+            <section>
+                <form class="search" method="get" action="#">
+                    <input type="text" name="query" placeholder="Search" />
+                </form>
             </section>
+
+            <!-- Links -->
+            <section>
+                <?php $walker = new My_Menu_Walker; ?>
+                <?php wp_nav_menu( array( 'theme_location' => 'burger', 'menu_class' => 'nav-menu', 'walker' => $walker, 'container' => 'ul', 'container_class' => 'links' ) ); ?>
+                <!-- <ul class="links">
+                    <li>
+                        <a href="#">
+                            <h3>Lorem ipsum</h3>
+                            <p>Feugiat tempus veroeros dolor</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h3>Dolor sit amet</h3>
+                            <p>Sed vitae justo condimentum</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h3>Feugiat veroeros</h3>
+                            <p>Phasellus sed ultricies mi congue</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h3>Etiam sed consequat</h3>
+                            <p>Porta lectus amet ultricies</p>
+                        </a>
+                    </li>
+                </ul> -->
+            </section>
+
+            <!-- Actions -->
+            <section>
+                <ul class="actions stacked">
+                    <li><a href="#" class="button large fit">Log In</a></li>
+                </ul>
+            </section>
+        </section>
