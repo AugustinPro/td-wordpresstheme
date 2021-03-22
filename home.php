@@ -4,7 +4,7 @@
 <main id="main">
 
 	<!-- Post -->
-
+ 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<article class="post">
 				<header>
@@ -25,7 +25,7 @@
 				</div>
 				<footer>
 					<ul class="actions">
-						<li><a href="<?php the_permalink(); ?>" class="button large">Continue Reading</a></li>
+						<li><a href="<?php the_permalink(); ?>" class="button large"><?php _e('Continue Reading', 'ap-fi'); ?></a></li>
 					</ul>
 					<ul class="stats">
 						<li><?php the_category(); ?></li>
