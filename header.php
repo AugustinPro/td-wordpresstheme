@@ -22,13 +22,6 @@
             <h1><a href="<?php echo home_url('/'); ?>"><?php bloginfo($show = 'name'); ?></a></h1>
             <nav class="links">
                 <?php wp_nav_menu(array('theme_location' => 'main', 'container' => 'ul')); ?>
-                <!-- <ul>
-                        <li><a href="#">Lorem</a></li>
-                        <li><a href="#">Ipsum</a></li>
-                        <li><a href="#">Feugiat</a></li>
-                        <li><a href="#">Tempus</a></li>
-                        <li><a href="#">Adipiscing</a></li>
-                    </ul> -->
             </nav>
             <nav class="main">
                 <ul>
@@ -58,33 +51,11 @@
             <!-- Links -->
             <section>
                 <?php $walker = new My_Menu_Walker; ?>
-                <?php wp_nav_menu( array( 'theme_location' => 'burger', 'menu_class' => 'nav-menu', 'walker' => $walker, 'container' => 'ul', 'container_class' => 'links' ) ); ?>
-                <!-- <ul class="links">
-                    <li>
-                        <a href="#">
-                            <h3>Lorem ipsum</h3>
-                            <p>Feugiat tempus veroeros dolor</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <h3>Dolor sit amet</h3>
-                            <p>Sed vitae justo condimentum</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <h3>Feugiat veroeros</h3>
-                            <p>Phasellus sed ultricies mi congue</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <h3>Etiam sed consequat</h3>
-                            <p>Porta lectus amet ultricies</p>
-                        </a>
-                    </li>
-                </ul> -->
+                <?php wp_nav_menu(array(
+                    'theme_location' => 'burger',
+                    'menu_class'     => 'links',
+                    'walker'         => $walker
+                )); ?>
             </section>
 
             <!-- Actions -->

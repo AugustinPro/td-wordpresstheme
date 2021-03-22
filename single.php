@@ -7,7 +7,7 @@
 		<header>
 			<div class="title">
 				<h2><a href="#"><?php the_title(); ?></a></h2>
-				<p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
+				<p><?php echo carbon_get_the_post_meta('crb_post_subtitle'); ?></p>
 			</div>
 			<div class="meta">
 				<time class="published" datetime="2015-11-01"><?php the_time( 'j F, Y' ); ?></time>

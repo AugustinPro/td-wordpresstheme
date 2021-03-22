@@ -10,7 +10,9 @@
 				<header>
 					<div class="title">
 						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-						<p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
+						<?php if(!empty(carbon_get_the_post_meta('crb_post_subtitle'))) { ?>
+						<p><?php echo carbon_get_the_post_meta('crb_post_subtitle'); ?></p>
+						<?php } ?>
 					</div>
 					<div class="meta">
 						<time class="published" datetime="2015-11-01"><?php the_time( 'j F, Y' ); ?></time>
@@ -44,6 +46,6 @@
 </main>
 
 <?php
-get_template_part('parts/sidebar');
+get_template_part('parts/assets');
 get_footer();
 ?>

@@ -44,6 +44,6 @@
 </main>
 
 <?php
-get_template_part('parts/sidebar');
+get_template_part('parts/assets');
 get_footer();
 ?>
