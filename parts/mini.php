@@ -2,44 +2,14 @@
     <div class="mini-posts">
 
         <!-- Mini Post -->
-        <article class="mini-post">
-            <header>
-                <h3><a href="single.html">Vitae sed condimentum</a></h3>
-                <time class="published" datetime="2015-10-20">October 20, 2015</time>
-                <a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
-            </header>
-            <a href="single.html" class="image"><img src="images/pic04.jpg" alt="" /></a>
-        </article>
-
-        <!-- Mini Post -->
-        <article class="mini-post">
-            <header>
-                <h3><a href="single.html">Rutrum neque accumsan</a></h3>
-                <time class="published" datetime="2015-10-19">October 19, 2015</time>
-                <a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
-            </header>
-            <a href="single.html" class="image"><img src="images/pic05.jpg" alt="" /></a>
-        </article>
-
-        <!-- Mini Post -->
-        <article class="mini-post">
-            <header>
-                <h3><a href="single.html">Odio congue mattis</a></h3>
-                <time class="published" datetime="2015-10-18">October 18, 2015</time>
-                <a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
-            </header>
-            <a href="single.html" class="image"><img src="images/pic06.jpg" alt="" /></a>
-        </article>
-
-        <!-- Mini Post -->
-        <article class="mini-post">
-            <header>
-                <h3><a href="single.html">Enim nisl veroeros</a></h3>
-                <time class="published" datetime="2015-10-17">October 17, 2015</time>
-                <a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
-            </header>
-            <a href="single.html" class="image"><img src="images/pic07.jpg" alt="" /></a>
-        </article>
-
+                <article class="mini-post">
+                    <header>
+                        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                        <time class="published" datetime="2015-10-20"><?php the_time( 'j F, Y' ); ?></time>
+                        <a href="#" class="author"><?php echo get_avatar( get_the_author_meta( 'ID' ), 40 ); ?></a>
+                    </header>
+                    <a href="<?php the_permalink(); ?>" class="image featured"><?php the_post_thumbnail(array(350.4,175.7)); ?></a>
+                </article>
+                
     </div>
 </section>

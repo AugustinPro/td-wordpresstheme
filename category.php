@@ -2,7 +2,7 @@
 
 <!-- Main -->
 <main id="main">
-	<P>CATEGORIES / <?php echo get_the_category()[1]; ?></P>
+	<P><?php _e( 'CATEGORY / ', 'ap-fi' ); the_category(', '); ?></P>
 	<!-- Post -->
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<article class="post">
